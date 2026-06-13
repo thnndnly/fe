@@ -5,8 +5,6 @@ const apiURL = process.env.API_URL || "http://localhost:5000";
 const CLOUDFRONT_HOSTNAME = "d2nwrdddg8skub.cloudfront.net";
 
 const nextConfig: NextConfig = {
-  typescript: { ignoreBuildErrors: true },
-  eslint: { ignoreDuringBuilds: true },
   compiler: {
     styledComponents: true,
   },
