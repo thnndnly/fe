@@ -19,11 +19,12 @@ import { NotificationBadge } from "./NotificationBadge";
 const BarContainer = styled.div`
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: sticky;
+  top: calc(var(--layout-static-page-header-height) + var(--spacing-32));
+  align-self: flex-start;
+  flex-shrink: 0;
   width: var(--dashboard-navigation-bar-container-width);
-  top: 112px;
-  left: 0;
-  z-index: 1;
+  z-index: 0;
   gap: var(--dashboard-navigation-bar-gap);
   background-color: var(--color-orchid-subtle);
   border-top-right-radius: var(--dashboard-navigation-bar-border-radius);
@@ -31,17 +32,20 @@ const BarContainer = styled.div`
   padding: var(--dashboard-navigation-bar-padding);
 
   @media (max-width: 767px) {
+    position: fixed;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
     top: auto;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: var(--dashboard-navigation-bar-mobile-height);
     gap: 4px;
     padding: 8px 4px;
     border-radius: var(--dashboard-navigation-bar-border-radius) var(--dashboard-navigation-bar-border-radius) 0 0;
     overflow-x: auto;
+    z-index: 1;
   }
 `;
 

@@ -51,22 +51,16 @@ export const IconDiv = styled.div<IconDiVProps>`
 `;
 
 export const DashboardBaseContainer = styled.div`
-  /* Ensure content is never hidden under the fixed left navigation bar.
-     On wide viewports the content stays centred; on narrower ones the left
-     margin is clamped to the sidebar width (+ 16px breathing room matching
-     the nav bar's own horizontal padding) so the two never overlap. */
-  margin-left: max(
-    calc(var(--dashboard-navigation-bar-container-width) + 16px),
-    calc((100% - var(--dashboard-base-container-width)) / 2)
-  );
-  margin-right: max(16px, calc((100% - var(--dashboard-base-container-width)) / 2));
+  flex: 1;
+  min-width: 0;
   max-width: var(--dashboard-base-container-width);
+  margin: 0 auto;
   padding-top: var(--dashboard-base-container-padding-top);
   padding-bottom: var(--dashboard-base-container-padding-bottom);
+  padding-left: var(--spacing-16);
+  padding-right: var(--spacing-16);
 
   @media (max-width: 767px) {
-    margin-left: 16px;
-    margin-right: 16px;
     padding-bottom: calc(
       var(--dashboard-base-container-padding-bottom) + var(--dashboard-navigation-bar-mobile-height)
     );
