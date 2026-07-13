@@ -1266,7 +1266,7 @@ html {
     --homepage-hero-section-logo-width: 450;
     --homepage-hero-section-header-height: 80px;
     --homepage-hero-section-header-menu-items-flex-direction: row;
-    --homepage-hero-section-header-menu-items-width: 680px;
+    --homepage-hero-section-header-menu-items-width: auto;
     --homepage-hero-section-header-menu-items-gap: 20px;
     --homepage-hero-section-header-menu-item-fontSize: 16px;
     --homepage-hero-section-header-menu-item-fontWeight: 600;
