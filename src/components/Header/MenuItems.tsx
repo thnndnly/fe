@@ -9,7 +9,8 @@ export const MenuItemsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: var(--homepage-hero-section-header-menu-items-flex-direction);
-  width: var(--homepage-hero-section-header-menu-items-width);
+  flex: 0 1 var(--homepage-hero-section-header-menu-items-width);
+  min-width: 0;
   gap: var(--homepage-hero-section-header-menu-items-gap);
   height: fit-content;
   a {
